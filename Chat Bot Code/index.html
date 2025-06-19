@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat Bot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    Please click here, if you are accessing Day 1 condition<a href="index1.html" class="center-link">Day 1</a>
+<br>
+    Please click below, if you want to test second condition<a href="index2.html" class="center-link">Day 2 - 8</a>
+
+    <br>
+        Looking forward to your feedback.
+<script>
+    window.addEventListener("message", (event) => {
+    // Always validate the sender's origin
+    const data = event.data;
+    console.log("Received from child:", data);
+
+    // Do something with the data
+    if (data.message === "Task completed") {
+        console.log("Result:", data.result);
+    }
+});
+
+</script>
+</body>
+</html>
